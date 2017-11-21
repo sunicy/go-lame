@@ -28,7 +28,7 @@ func PcmToMp3Customize(pcmFileName, mp3FileName string) {
 	}
 	wr.InSampleRate = 44100  // input sample rate
 	wr.InNumChannels = 1     // number of channels: 1
-	wr.OutMode = MODE_STEREO // common, 2 channels
+	wr.OutMode = lame.MODE_STEREO // common, 2 channels
 	wr.OutQuality = 9        // 0: highest; 9: lowest
 	wr.OutSampleRate = 8000
 	io.Copy(wr, pcmFile)
